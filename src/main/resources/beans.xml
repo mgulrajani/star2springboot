@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+<bean id="address" name="address" class="com.training.entities.Address">
+
+<property name="city" value="Mumbai"/>
+<property name="pincode" value="343434"/>
+
+</bean>
+<bean id="emp1" class="com.training.entities.Employee" name="emp1" >
+<property name="id" value="1111" />
+<property name="name" value="John" />
+<property name="address" ref="address"/>
+</bean>
+
+</beans>
